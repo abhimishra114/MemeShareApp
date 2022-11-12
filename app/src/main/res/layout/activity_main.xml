@@ -8,6 +8,7 @@
 
     <ImageView
         android:id="@+id/memeImageView"
+        android:background="@color/black"
         android:layout_width="0dp"
         android:layout_height="0dp"
         app:layout_constraintBottom_toTopOf="@id/shareButton"
@@ -16,8 +17,19 @@
         app:layout_constraintTop_toTopOf="parent"
         tools:srcCompat="@tools:sample/avatars" />
 
-    <Button
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toTopOf="@id/memeImageView"
+        app:layout_constraintLeft_toLeftOf="@id/memeImageView"
+        app:layout_constraintRight_toRightOf="@id/memeImageView"
+        app:layout_constraintBottom_toBottomOf="@id/memeImageView"/>
+
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/shareButton"
+        android:background="@color/shareButtonColor"
+        android:textColor="@color/white"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Share"
@@ -27,8 +39,10 @@
         app:layout_constraintRight_toLeftOf="@id/guideline2"
         android:onClick="shareMeme"/>
 
-    <Button
+    <androidx.appcompat.widget.AppCompatButton
         android:id="@+id/nextButton"
+        android:background="@color/nextButtonColor"
+        android:textColor="@color/white"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:text="Next"
